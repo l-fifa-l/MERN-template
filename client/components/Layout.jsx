@@ -9,7 +9,7 @@ export default function Layout({ children }) {
       </Head>
       <main className="w-full">
         <Navbar />
-        <div>{children}</div>
+        <>{children}</>
       </main>
     </>
   );
