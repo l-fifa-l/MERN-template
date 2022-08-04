@@ -2,19 +2,28 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 function Navbar() {
+  let username = 'Guest';
   return (
-    <Nav variant="pills" defaultActiveKey="/home">
-      <Nav.Item>
-        <Link to="/">
-          <Nav.Link>Home</Nav.Link>
+    <>
+      <div className="navbar bg-neutral text-neutral-content">
+        <Link to="/" className="btn btn-ghost normal-case text-xl">
+          Home
         </Link>
-      </Nav.Item>
-      <Nav.Item>
-        <Link to="/about">
-          <Nav.Link eventKey="/about">About</Nav.Link>
+      </div>
+      <div className="navbar bg-base-300">
+        <Link to="/about" className="btn btn-ghost normal-case text-xl">
+          About
         </Link>
-      </Nav.Item>
-    </Nav>
+      </div>
+      <div className="navbar bg-primary text-primary-content">
+        <Link
+          to={`/profile/${username}`}
+          className="btn btn-ghost normal-case text-xl"
+        >
+          Profile
+        </Link>
+      </div>
+    </>
   );
 }
 
