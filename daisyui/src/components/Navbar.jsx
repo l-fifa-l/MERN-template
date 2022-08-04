@@ -9,13 +9,9 @@ function Navbar() {
         <Link to="/" className="btn btn-ghost normal-case text-xl">
           Home
         </Link>
-      </div>
-      <div className="navbar bg-base-300">
         <Link to="/about" className="btn btn-ghost normal-case text-xl">
           About
         </Link>
-      </div>
-      <div className="navbar bg-primary text-primary-content">
         <Link
           to={`/profile/${username}`}
           className="btn btn-ghost normal-case text-xl"

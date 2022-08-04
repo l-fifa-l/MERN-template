@@ -1,10 +1,12 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Home from './pages/home';
-import Profile from './pages/profile';
-import About from './pages/about';
-import ErrorPage from './pages/notfound';
+import './index.css';
+import Navbar from '../../daisyui/src/components/Navbar';
+import Footer from '../../daisyui/src/components/Footer';
+import Home from '../../daisyui/src/pages/home';
+import Profile from '../../daisyui/src/pages/profile';
+import About from '../../daisyui/src/pages/about';
+import ErrorPage from '../../daisyui/src/pages/notfound';
 
 function App() {
   return (
@@ -16,7 +18,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
-      <div> Foooter </div>
+      <Footer />
     </Router>
   );
 }
